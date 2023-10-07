@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "service_name": " Tournament Hosting",
+        "description": "Host and manage competitive gaming tournaments for your event.",
+        "price": "$500",
+        "image_url": "https://i.ibb.co/K6T5Hfv/download.jpg"
+    },
+    {
+        "id": 2,
+        "service_name": "VR Gaming Experience",
+        "description": "Offer immersive virtual reality gaming stations at your event.",
+        "price": "$800",
+        "image_url": "https://i.ibb.co/NC2ChPq/vr-game-design-principles-for-immersive-and-enjoyable-experiences-original.jpg"
+    },
+    {
+        "id": 3,
+        "service_name": " Console Rentals",
+        "description": "Rent gaming consoles and controllers for your event attendees.",
+        "price": "$200",
+        "image_url": "https://i.ibb.co/0Kk85ND/istockphoto-1334436084-612x612.jpg"
+    },
+    {
+        "id": 4,
+        "service_name": "LAN Party Setup",
+        "description": "Set up a LAN party with gaming PCs and high-speed networking.",
+        "price": "$600",
+        "image_url": "https://i.ibb.co/qFY1MTD/reasons-hero-1440x.jpg"
+    },
+    {
+        "id": 5,
+        "service_name": "Game Cosplay Contest",
+        "description": "Organize a cosplay contest for gaming enthusiasts.",
+        "price": "$350",
+        "image_url": "https://i.ibb.co/WgLYShj/1.jpg"
+    },
+    {
+        "id": 6,
+        "service_name": "Game Streaming Booth",
+        "description": "Provide a streaming booth for gamers to showcase their skills live.",
+        "price": "$400",
+        "image_url": "https://i.ibb.co/VHhqVsZ/maxresdefault.jpg"
+    }
+]
