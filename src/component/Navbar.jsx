@@ -5,15 +5,15 @@ import img from '../assets/user.png'
 const Navbar = () => {
 
     const NavLinks = <>
-        <NavLink to={'/'}><li className='font-bold'> <a>Home</a></li></NavLink>
-        <NavLink to={'/about'}><li className='font-bold' > <p>About</p></li></NavLink>
-        <NavLink to={'/career'}> <li className='font-bold'> <p>Career</p></li></NavLink>
-        <NavLink to={'/login'}><li className='font-bold'> <p>login</p></li></NavLink>
+        <NavLink to={'/'}><li className='font-bold text-white border-l-2 border-r-2'> <a>Home</a></li></NavLink>
+        <NavLink to={'/about'}><li className='font-bold text-white  border-r-2' > <p>About</p></li></NavLink>
+        <NavLink to={'/career'}> <li className='font-bold text-white  border-r-2'> <p>Career</p></li></NavLink>
+        <NavLink to={'/login'}><li className='font-bold text-white border-r-2'> <p>login</p></li></NavLink>
     </>
 
     return (
         <div>
-            <div className="navbar  ">
+            <div className="navbar bg-black  ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,19 +28,19 @@ const Navbar = () => {
 
                 </div>
 
-                
-                <div className="navbar-center hidden lg:flex">
+
+                <div className="navbar-center hidden lg:flex ">
                     <ul className="menu menu-horizontal px-1">
                         {NavLinks}
 
                     </ul>
                 </div>
 
-                <div className="navbar-end gap-2">
+                <div className="navbar-end  gap-2">
                     <div className="w-10 rounded-full">
-                        <img src={img} />
+                        <img className='rounded-full' src={img} />
                     </div>
-                    <a className="btn btn-sm btn-outline">login</a>
+                    <a className="btn btn-sm btn-outline text-amber-300 hover:bg-black">login</a>
                 </div>
             </div>
         </div>

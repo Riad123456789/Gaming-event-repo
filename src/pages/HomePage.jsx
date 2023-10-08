@@ -4,6 +4,9 @@ import img from "../assets/pngtree-game-volcano-advertising-background-picture-i
 import { useLoaderData } from "react-router-dom";
 import Card from "../card/Card";
 import Sponsored from "../component/Sponsored";
+import Section1 from "../component/section1";
+import Section2 from "../component/Section2";
+
 
 
 const HomePage = () => {
@@ -17,7 +20,7 @@ const HomePage = () => {
             <div className=" ">
                 <img className="w-[1300px] h-80" src={img} alt="" />
 
-                <div style={{marginTop:"-270px"}} className="text-center text-pink-600 text-3xl    ">
+                <div style={{ marginTop: "-270px" }} className="text-center text-pink-600 text-3xl    ">
                     <p className="font-semibold "> GAMING EVENTS AND ACTIVATIONS</p>
                     <div className="pt-10">
                         <p className="font-semibold  btn btn-outline btn-sm  text-white hover:bg-red-500 "> GAMING & EVENTS </p>
@@ -36,10 +39,11 @@ const HomePage = () => {
                         suevices.map(survic => <Card survic={survic} key={survic.id}></Card>)
                     }
                 </div>
-            </div> 
+            </div>
 
-
-            {/* <Sponsored></Sponsored> */}
+            <Section1></Section1>
+            <Sponsored></Sponsored>
+            <Section2></Section2>
         </div>
     );
 };

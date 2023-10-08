@@ -10,7 +10,7 @@ import 'swiper/css/scrollbar';
 
 const Slider = () => {
     return (
-        <div className='max-w-6xl mx-auto p-10'>
+        <div className=' mx-auto p-10 bg-black'>
             <Swiper
                 spaceBetween={10}
                 slidesPerView={5}
@@ -23,13 +23,13 @@ const Slider = () => {
                 scrollbar={{ draggable: true }}
 
             >
-                <SwiperSlide><img className=" h-36 md: h-96 w-56" src={img} alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-96 w-56" src={img} alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-96 w-56" src={img} alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-96 w-56" src={img} alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-96 w-56" src={img} alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-96 w-56" src={img} alt="" /></SwiperSlide>
-                <SwiperSlide><img className="h-96 w-56" src={img} alt="" /></SwiperSlide>
+                <SwiperSlide><img className="  h-60 w-56" src={img} alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-60 w-56" src={img} alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-60 w-56" src={img} alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-60 w-56" src={img} alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-60 w-56" src={img} alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-60 w-56" src={img} alt="" /></SwiperSlide>
+                <SwiperSlide><img className="h-60 w-56" src={img} alt="" /></SwiperSlide>
 
 
             </Swiper>
