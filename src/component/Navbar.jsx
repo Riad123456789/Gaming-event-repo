@@ -1,14 +1,27 @@
 
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import img from '../assets/user.png'
+import { useContext } from 'react';
+import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
+
+    const { LogOut, user } = useContext(AuthContext);
+
+    const handleSignOut = e => {
+        e.preventDefault();
+
+        LogOut()
+            .then()
+            .catch()
+
+    }
 
     const NavLinks = <>
         <NavLink to={'/'}><li className='font-bold text-white border-l-2 border-r-2'> <a>Home</a></li></NavLink>
         <NavLink to={'/services'}><li className='font-bold text-white  border-r-2' > <p>services </p></li></NavLink>
         <NavLink to={'/career'}> <li className='font-bold text-white  border-r-2'> <p>Career</p></li></NavLink>
-        <NavLink to={'/login'}><li className='font-bold text-white border-r-2'> <p>login</p></li></NavLink>
+        <NavLink to={'/register'}><li className='font-bold text-white border-r-2'> <p>Contact</p></li></NavLink>
     </>
 
     return (
@@ -40,8 +53,21 @@ const Navbar = () => {
                     <div className="w-10 rounded-full">
                         <img className='rounded-full' src={img} />
                     </div>
-                    <a className="btn btn-sm btn-outline text-amber-300 hover:bg-black">login</a>
+
+
+                    {
+                        user ? <button onClick={handleSignOut} className="btn btn-sm btn-outline text-amber-300 hover:bg-black">Sing out</button>
+                            :
+                            <button onClick={handleSignOut} className="btn btn-sm btn-outline text-amber-300 hover:bg-black">
+
+                                <Link to={'/login'}>login</Link>
+                            </button>
+                    }
+
+
+
                 </div>
+
             </div>
         </div>
     );

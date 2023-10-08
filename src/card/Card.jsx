@@ -6,8 +6,8 @@ const Card = ({ survic }) => {
 
     return (
         <div>
-            <div className="card w-72 h-96 mx-auto bg-slate-800 shadow-xl hover:bg-teal-300">
-                <figure><img className='h-50' src={image_url} alt="Shoes" /></figure>
+            <div className=" w-72 h-96 mx-auto bg-slate-800 shadow-xl hover:bg-teal-300">
+                <figure><img className='h-50' src={image_url} alt="" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-white font-bold">{service_name}</h2>
                     <p className='text-red-800'>{description}</p>
