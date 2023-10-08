@@ -5,13 +5,13 @@ const Foother = () => {
         <div className="">
             <footer className="footer p-10 bg-black text-base-content">
                 <nav className="text-white">
-                     <header className="footer-title">Services</header>
+                    <header className="footer-title">Services</header>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
                 </nav>
-                <nav className="text-white"> 
+                <nav className="text-white">
                     <header className="footer-title">Company</header>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
@@ -37,7 +37,7 @@ const Foother = () => {
                     </fieldset>
                 </form>
             </footer>
-          
+
         </div>
     );
 };
