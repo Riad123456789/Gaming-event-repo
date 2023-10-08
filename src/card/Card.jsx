@@ -6,13 +6,13 @@ const Card = ({ survic }) => {
 
     return (
         <div>
-            <div className="card w-72 h-96 mx-auto bg-rose-400 shadow-xl hover:bg-teal-300">
+            <div className="card w-72 h-96 mx-auto bg-slate-800 shadow-xl hover:bg-teal-300">
                 <figure><img className='h-50' src={image_url} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-white font-bold">{service_name}</h2>
-                    <p className=''>{description}</p>
+                    <p className='text-red-800'>{description}</p>
                     <div className="card-actions items-center justify-end">
-                        <p>price: {price}</p>
+                        <p className='text-orange-600'>price: {price}</p>
                         <button className="btn btn-outline btn-sm  hover: text-amber-500 ">more details</button>
                     </div>
                 </div>

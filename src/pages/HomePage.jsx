@@ -14,13 +14,21 @@ const HomePage = () => {
         <div className="">
             <Header></Header>
             <Navbar></Navbar>
-            <div className="border relative">
+            <div className=" ">
                 <img className="w-[1300px] h-80" src={img} alt="" />
+
+                <div style={{marginTop:"-270px"}} className="text-center text-pink-600 text-3xl    ">
+                    <p className="font-semibold "> GAMING EVENTS AND ACTIVATIONS</p>
+                    <div className="pt-10">
+                        <p className="font-semibold  btn btn-outline btn-sm  text-white hover:bg-red-500 "> GAMING & EVENTS </p>
+                    </div>
+                </div>
+
             </div>
 
-            <div className="bg-black">
-                <div className=" text-center pt-8 ">
-                    <p className="  text-3xl"><span className="text-orange-500">Esports</span> <span className="text-teal-500">and Gaming </span><span className="text-red-700 font-bold">services</span> </p>
+            <div className="bg-black mt-28">
+                <div className=" text-center pt-20 ">
+                    <p className=" btn btn-outline  text-3xl"><span className="text-orange-500">Esports</span> <span className="text-teal-500">and Gaming </span><span className="text-red-700 font-bold">services</span> </p>
                 </div>
 
                 <div className="grid gap-10 mt-10 md:grid-cols-2 lg:grid-cols-3 bg-black  shadow-lg rounded-lg pt-6 pb-4 ">
@@ -28,7 +36,7 @@ const HomePage = () => {
                         suevices.map(survic => <Card survic={survic} key={survic.id}></Card>)
                     }
                 </div>
-            </div>
+            </div> 
 
 
             {/* <Sponsored></Sponsored> */}
