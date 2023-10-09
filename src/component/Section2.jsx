@@ -23,8 +23,8 @@ AOS.init({
     debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
     throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
     offset: 120, // offset (in px) from the original trigger point
-    delay: 20, // values from 0 to 3000, with step 50ms
-    duration: 1500, // values from 0 to 3000, with step 50ms
+    delay: 200, // values from 0 to 3000, with step 50ms
+    duration: 2000, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
     once: false, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
@@ -37,7 +37,7 @@ const Section2 = () => {
     return (
         <div className="bg-black ">
             <div className="">
-                <p className="text-center text-3xl text-green-500 pt-9 ">Gaming gallery</p>
+                <p className="text-center text-3xl text-green-500 pt-9 ">Tournaments by game</p>
             </div>
 
             <div className="grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-16 ">

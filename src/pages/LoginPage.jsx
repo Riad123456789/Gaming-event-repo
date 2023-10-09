@@ -3,15 +3,13 @@ import Navbar from '../component/Navbar';
 import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import Foother from '../component/Foother';
+import swal from 'sweetalert';
 
 const LoginPage = () => {
-    const { LoginUser, loading, } = useContext(AuthContext);
+    const { LoginUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const Location = useLocation();
 
-    if (loading) {
-        return <span className="loading loading-spinner loading-md  "></span>
-    }
 
     const handleLogin = e => {
         e.preventDefault();
@@ -22,9 +20,16 @@ const LoginPage = () => {
 
         LoginUser(email, password)
             .then(
-                () => {
+                (result) => {
                     navigate(Location?.state ? Location.state : "/")
+
+                    if (result.user) {
+                        swal('successfully login')
+                    }
                 }
+
+
+
             )
             .catch()
     }

@@ -14,13 +14,13 @@ const Navbar = () => {
         LogOut()
             .then()
             .catch()
-
     }
 
+
     const NavLinks = <>
-        <NavLink to={'/'}><li className='font-bold text-white border-l-2 border-r-2'> <a>Home</a></li></NavLink>
+        <NavLink to={'/'}><li className='font-bold text-white border-l-2 border-r-2'> <p>Home</p></li></NavLink>
         <NavLink to={'/services'}><li className='font-bold text-white  border-r-2' > <p>services </p></li></NavLink>
-        <NavLink to={'/career'}> <li className='font-bold text-white  border-r-2'> <p>Career</p></li></NavLink>
+        <NavLink to={'/about'}> <li className='font-bold text-white  border-r-2'> <p>about </p></li></NavLink>
         <NavLink to={'/register'}><li className='font-bold text-white border-r-2'> <p>Contact</p></li></NavLink>
     </>
 
@@ -50,21 +50,33 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end  gap-2">
-                    <div className="w-10 rounded-full">
-                        <img className='rounded-full' src={img} />
-                    </div>
+
+                    {
+                        user?.displayName ? <p className='text-white text-xs'>{user.displayName}</p> : <p></p>
+                    }
+
+                    {
+                        user?.photoURL ? <div className="w-10 border rounded-full">
+                            <img className='rounded-full' src={user.photoURL} />
+                        </div>
+                            :
+                            <div className="w-10 rounded-full">
+                                <img className='rounded-full' src={img} />
+                            </div>
+                    }
 
 
                     {
                         user ? <button onClick={handleSignOut} className="btn btn-sm btn-outline text-amber-300 hover:bg-black">Sing out</button>
                             :
-                            <button onClick={handleSignOut} className="btn btn-sm btn-outline text-amber-300 hover:bg-black">
+
+                            <button  className="btn btn-sm btn-outline text-amber-300 hover:bg-black">
 
                                 <Link to={'/login'}>login</Link>
                             </button>
+
+
                     }
-
-
 
                 </div>
 

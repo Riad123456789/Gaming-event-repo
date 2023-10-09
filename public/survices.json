@@ -3,13 +3,15 @@
         "id": 1,
         "service_name": " Tournament Hosting",
         "description": "Host and manage competitive gaming tournaments for your event.",
+        "more_description": "Tournaments granted a waiver from using the SRVA central tournament registration system or requesting a play format not listed in IV.A.5.a  d shall pay a deposit ($950  single day or $1,150  multiple day) in advance of the granting of the tournament sanction and waiver",
         "price": "$500",
         "image_url": "https://i.ibb.co/K6T5Hfv/download.jpg"
     },
     {
         "id": 2,
         "service_name": "VR Gaming Experience",
-        "description": "Offer immersive virtual reality gaming stations at your event.",
+        "description": "Offer immersive virtual reality gaming Event stations at your event.",
+        "more_description": "The goal of VR gaming systems is to let users believe they inhabit a virtual world. With a VR headset on, you'll see a 360-degree view of the virtual environment. You can move around, duck, jump, or even fly in real time as if you were actually there",
         "price": "$800",
         "image_url": "https://i.ibb.co/NC2ChPq/vr-game-design-principles-for-immersive-and-enjoyable-experiences-original.jpg"
     },
@@ -17,6 +19,7 @@
         "id": 3,
         "service_name": " Console Rentals",
         "description": "Rent gaming consoles and controllers for your event attendees.",
+        "more_description": "Controllers, security cases, tethers, and other accessories are available to ensure your event runs smoothly.We can load your console with games of your choice and we have a huge selection of games you can add to your rental.",
         "price": "$200",
         "image_url": "https://i.ibb.co/0Kk85ND/istockphoto-1334436084-612x612.jpg"
     },
@@ -24,6 +27,7 @@
         "id": 4,
         "service_name": "LAN Party Setup",
         "description": "Set up a LAN party with gaming PCs and high-speed networking.",
+        "more_description": "To set up a LAN party without an internet connection, you will have to connect all the devices to a switch or router using Ethernet cables. No internet connection only means you will not be able to play online multiplayer games, but you can still have a lot of fun playing LAN multiplayer games with your friends",
         "price": "$600",
         "image_url": "https://i.ibb.co/qFY1MTD/reasons-hero-1440x.jpg"
     },
@@ -31,6 +35,7 @@
         "id": 5,
         "service_name": "Game Cosplay Contest",
         "description": "Organize a cosplay contest for gaming enthusiasts.",
+        "more_description": ": Contestants perform on stage. Performance can be a skit, music, dancing, martial arts, etc. Skits are restricted to two and a half (2.5) minutes on the stage. Walk-On: Contestants walk onto the stage and do several different poses for at least 30 seconds to show off their costume.",
         "price": "$350",
         "image_url": "https://i.ibb.co/WgLYShj/1.jpg"
     },
@@ -38,6 +43,7 @@
         "id": 6,
         "service_name": "Game Streaming Booth",
         "description": "Provide a streaming booth for gamers to showcase their skills live.",
+        "more_description": "Free yourself from the headphones and plunge into the soundscape of your game or streaming, boundless of the noise you produce or the sounds outside, in an easy to assemble soundproof booth.",
         "price": "$400",
         "image_url": "https://i.ibb.co/VHhqVsZ/maxresdefault.jpg"
     }
