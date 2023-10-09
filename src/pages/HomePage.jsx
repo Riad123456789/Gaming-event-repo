@@ -6,12 +6,21 @@ import Card from "../card/Card";
 import Sponsored from "../component/Sponsored";
 import Section1 from "../component/section1";
 import Section2 from "../component/Section2";
+import Foother from "../component/Foother";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 
 const HomePage = () => {
 
     const suevices = useLoaderData()
+    const { loading } = useContext(AuthContext)
+
+    if (loading) {
+        return <span className="loading loading-spinner loading-md  "></span>
+    }
+
 
     return (
         <div className="">
@@ -44,6 +53,10 @@ const HomePage = () => {
             <Section1></Section1>
             <Sponsored></Sponsored>
             <Section2></Section2>
+            <Foother></Foother>
+
+
+
         </div>
     );
 };

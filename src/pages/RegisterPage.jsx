@@ -2,12 +2,19 @@ import { Link } from 'react-router-dom';
 import Navbar from '../component/Navbar';
 import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
+import Foother from '../component/Foother';
 
 
 const Register = () => {
 
-    const { createUser, name } = useContext(AuthContext);
+    const { createUser, name,loading } = useContext(AuthContext);
     console.log(createUser, name);
+
+    
+    if (loading) {
+        return <span className="loading loading-spinner loading-md  "></span>
+    }
+
 
 
     const handleRegister = e => {
@@ -78,6 +85,7 @@ const Register = () => {
                     </div>
                 </div>
             </section>
+            <Foother></Foother>
         </div>
     );
 };

@@ -3,6 +3,7 @@ import img from "../assets/7445.webp"
 import img1 from "../assets/call-of-duty-modern-warfare-3-26830-1920x1080.jpg"
 import img3 from "../assets/331212e60a5a281b46d47e7d05d15f8f.jpg"
 import img4 from "../assets/1f71e64d2805e8f78ffd8dd7f4be23ed--news-games-pc-games.jpg"
+import Foother from "../component/Foother";
 
 const ServicesPage = () => {
     return (
@@ -66,6 +67,7 @@ const ServicesPage = () => {
                 </div>
 
             </div>
+            <Foother></Foother>
 
         </div>
     );

@@ -6,30 +6,31 @@ import HomePage from "../pages/HomePage";
 import ServicesPage from "../pages/ServicesPage";
 import LoginPage from "../pages/LoginPage";
 import Register from "../pages/RegisterPage";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
-        children:[
+        children: [
             {
-                path:'/',
-                element:<HomePage></HomePage>,
-                loader:()=>fetch('survices.json')
-                                
+                path: '/',
+                element: <HomePage></HomePage>,
+                loader: () => fetch('survices.json')
+
             },
             {
-                path:'/services',
-                element:<ServicesPage></ServicesPage>
+                path: '/services',
+                element: <PrivateRoute><ServicesPage></ServicesPage></PrivateRoute>
             },
             {
-                path:'/login',
-                element:<LoginPage></LoginPage>
+                path: '/login',
+                element: <LoginPage></LoginPage>
             },
             {
-                path:"/register",
-                element:<Register></Register>
+                path: "/register",
+                element: <Register></Register>
             }
         ]
     },

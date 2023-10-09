@@ -1,12 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../component/Navbar';
 import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
+import Foother from '../component/Foother';
 
 const LoginPage = () => {
-    const { LoginUser } = useContext(AuthContext);
+    const { LoginUser, loading, } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const Location = useLocation();
 
-   
+    if (loading) {
+        return <span className="loading loading-spinner loading-md  "></span>
+    }
 
     const handleLogin = e => {
         e.preventDefault();
@@ -16,9 +21,11 @@ const LoginPage = () => {
 
 
         LoginUser(email, password)
-            .then(res => {
-                console.log(res.user)
-            })
+            .then(
+                () => {
+                    navigate(Location?.state ? Location.state : "/")
+                }
+            )
             .catch()
     }
 
@@ -64,6 +71,7 @@ const LoginPage = () => {
                     </div>
                 </div>
             </section>
+            <Foother></Foother>
         </div>
     );
 };
