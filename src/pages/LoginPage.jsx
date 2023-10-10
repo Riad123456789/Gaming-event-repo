@@ -5,10 +5,16 @@ import { AuthContext } from '../provider/AuthProvider';
 import Foother from '../component/Foother';
 import swal from 'sweetalert';
 
+
+
+
 const LoginPage = () => {
-    const { LoginUser } = useContext(AuthContext);
+    const { LoginUser, loading } = useContext(AuthContext);
     const navigate = useNavigate();
     const Location = useLocation();
+    if (loading) {
+        return <span className="loading loading-spinner loading-md  "></span>
+    }
 
 
     const handleLogin = e => {
@@ -28,10 +34,10 @@ const LoginPage = () => {
                     }
                 }
 
-
-
             )
-            .catch()
+            .catch(error =>{
+                console.log(error)
+            })
     }
 
 
@@ -66,11 +72,11 @@ const LoginPage = () => {
                                 <div className="form-control mt-6">
                                     <button className="btn btn-outline text-orange-400">Login</button>
                                 </div>
-                                <Link to={'/register'}>
-                                    <p className="text-sm mt-4 font-light text-red-700">
-                                        please  register your account ?   <a href="#" className="font-medium text-blue-500 text-primary-600 hover:underline dark:text-primary-500">register</a>
-                                    </p>
-                                </Link>
+
+                                <div className="text-sm mt-4 font-light text-red-700 flex">
+                                    register your account ?   <p href="#" className="font-medium text-blue-500 text-primary-600 hover:underline dark:text-primary-500">  <Link to={'/register'}>register  </Link></p>
+                                </div>
+
                             </form>
                         </div>
                     </div>

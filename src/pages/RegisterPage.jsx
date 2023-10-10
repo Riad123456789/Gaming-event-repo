@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link,} from 'react-router-dom';
 import Navbar from '../component/Navbar';
 import { useContext } from 'react'
 import { AuthContext } from '../provider/AuthProvider';
@@ -6,15 +6,20 @@ import Foother from '../component/Foother';
 import { FaGoogle } from 'react-icons/fa';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import swal from 'sweetalert';
+
+
+
 const Register = () => {
 
     const { createUser, loading } = useContext(AuthContext);
-
+   
 
     if (loading) {
         return <span className="loading loading-spinner loading-md  "></span>
     }
 
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth();
 
 
     const handleRegister = e => {
@@ -24,32 +29,37 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
 
-        console.log(name, email, password)
+        if (password.length < 6) {
+            swal('password must be at least 6 character')
+            return;
+        }
+
 
         createUser(email, password, name)
             .then(result => {
                 if (result.user) {
                     swal('successfully register')
                 }
+            
             })
-            .catch(error => {
-                console.log(error)
-            })
+            .catch()
+
 
     }
-
-
-
-    const handleRegisterWithGoogle = e => {
+    const handlegoogle = e => {
         e.preventDefault();
-        const provider = new GoogleAuthProvider();
-        const auth = getAuth();
-
         signInWithPopup(auth, provider)
-            .then()
+            .then(result => {
+
+                if (result.user) {
+                    swal('successfully register')
+                }
+            })
             .catch()
 
     }
+
+
 
 
     return (
@@ -91,16 +101,18 @@ const Register = () => {
 
                                     <button className="btn btn-outline text-orange-400">Register</button>
                                 </div>
+                                <form onSubmit={handlegoogle}>
+                                    <div className="form-control mt-6">
 
-                                <div className="form-control mt-6">
+                                        <button className="btn btn-outline text-orange-400"><FaGoogle></FaGoogle> sign up with google</button>
+                                    </div>
+                                </form>
 
-                                    <button onSubmit={handleRegisterWithGoogle} className="btn btn-outline text-orange-400"><FaGoogle></FaGoogle> sign up with google</button>
-                                </div>
-                                <Link to={'/login'}>
+                              
                                     <p className="text-sm mt-4 font-light text-red-700">
-                                        Already have an account ? <a href="#" className="font-medium text-blue-500 text-primary-600 hover:underline dark:text-primary-500">Login</a>
+                                        Already have an account ? <a href="#" className="font-medium text-blue-500 text-primary-600 hover:underline dark:text-primary-500">  <Link to={'/login'}>Login  </Link></a>
                                     </p>
-                                </Link>
+                              
                             </form>
                         </div>
                     </div>
